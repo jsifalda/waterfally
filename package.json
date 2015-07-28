@@ -1,27 +1,19 @@
 {
-  "name": "promise-waterfall",
+  "name": "waterfally",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dotSlashLu/promise-waterfall.git"
+    "url": "https://github.com/jsifalda/waterfally"
   },
-  "description": "promise-waterfall extends promise utilities with sequential flow control like async.waterfall",
+  "description": "Waterfally do similar as async.waterfall (sequential flow control) with support of promises",
   "main": "index.js",
-  "scripts": {
-    "test": "make test"
-  },
   "keywords": [
     "promise",
     "async",
-    "flow control"
+    "flow control",
+    "waterfall"
   ],
-  "devDependencies": {
-    "q": "^1.0.1",
-    "bluebird": "^2.3.6",
-    "mocha": "~1.8.1",
-    "chai": "~1.5.0"
-  },
-  "author": "dotslash.lu",
+  "author": "dotslash.lu, jsifalda",
   "license": "MIT",
   "dependencies": {
     "promise": "~6.0.1"

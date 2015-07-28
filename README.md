@@ -1,14 +1,14 @@
-# Promise-waterfall
-Promise-waterfall extends promise utilities with sequential flow control like [async.waterfall](https://github.com/caolan/async#waterfalltasks-callback). 
+# Waterfally
+Waterfally do similar as [async.waterfall](https://github.com/caolan/async#waterfalltasks-callback) (sequential flow control) with support of promises. 
 
 Since `Promise.all(promiseArr)` || `Promise.spread(promiseArr)` execs promises simultaneously, each of the functions in the promiseArr cannot depend on another, and if you want promises execute in order or some of the promises need the resolved value of another, this library is for you.
 
 ## Installation
-`npm install promise-waterfall`
+`npm install waterfally`
 
 ## Usage
 ```javascript
-var waterfall = require("promise-waterfall");
+var waterfall = require("waterfally");
 var func1 = function(){
         // return a promise
     },
@@ -32,19 +32,4 @@ waterfall(promiseSequence)
         // deal with error
     });
 ```
-See test cases in `/tests` for full examples.
 
-## Development
-
-### Test
-run `npm test` or `make test`
-
-### Changelog
-* v0.1 (Thanks to @stevenvachon)
-    * Return a promise(fulfilled when returned normally or rejected when error occurs) in whatever condition;
-    * Compatible with all libraries conforming to Promises/A+ spec;
-    * Dropped client support
-* v0.0.1 
-    * First release
-
-### Thanks 

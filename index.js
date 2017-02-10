@@ -1,3 +1,19 @@
+var collector = (callback) => {
+  var values = []
+  return () => {
+    var result = callback(values)
+    if (isPromise(result)) {
+      return result.then((r) => {
+        values.push(r)
+        return values
+      })
+    } else {
+      values.push(result)
+      return values
+    }
+  }
+}
+
 function isPromise (obj) {
   return obj && typeof obj.then === 'function'
 }
@@ -54,5 +70,7 @@ function waterfall (list, arg) {
     }
   })
 }
+
+waterfall.collector = collector
 
 module.exports = waterfall

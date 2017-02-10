@@ -16,9 +16,8 @@
   "author": "dotslash.lu, jsifalda",
   "license": "MIT",
   "dependencies": {
-    "promise": "~6.0.1"
   },
-    "publishConfig": {
-      "registry": "http://registry.npmjs.org/"
-    }
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  }
 }

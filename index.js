@@ -1,5 +1,3 @@
-var Promise = require('promise')
-
 function isPromise (obj) {
   return obj && typeof obj.then === 'function'
 }

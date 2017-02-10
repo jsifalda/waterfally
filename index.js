@@ -1,6 +1,12 @@
 var collector = (callback) => {
-  var values = []
-  return () => {
+  var counter = 0
+  return (values) => {
+    if (counter === 0 && !Array.isArray(values)) {
+      values = []
+    }
+
+    counter++
+
     var result = callback(values)
     if (isPromise(result)) {
       return result.then((r) => {
